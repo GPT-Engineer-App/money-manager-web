@@ -1,0 +1,30 @@
+CREATE DATABASE projetofinanceiro;
+
+CREATE TABLE usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nomeCompleto VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE categoria (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE conta (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    saldo DECIMAL(10, 2) NOT NULL
+);
+
+CREATE TABLE transacao (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(255) NOT NULL,
+    valor DECIMAL(10, 2) NOT NULL,
+    data DATE NOT NULL,
+    tipo ENUM('gasto', 'receita') NOT NULL,
+    conta_id INT,
+    categoria_nome VARCHAR(255),
+    FOREIGN KEY (conta_id) REFERENCES conta(id),
+    FOREIGN KEY (categoria_nome) REFERENCES categoria(nome)
+);

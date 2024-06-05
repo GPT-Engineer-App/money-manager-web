@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gastos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Gastos</h1>
+        <button class="add-btn" onclick="location.href='add_transacao.html'">Adicionar Gasto</button>
+      </header>
+      <div id="chart"></div>
+      <div class="filter">
+        <input type="text" id="filter" placeholder="Filtrar..." />
+      </div>
+      <div class="transaction-list">
+        <!-- Lista de transações será carregada aqui -->
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

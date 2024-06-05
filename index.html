@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Cadastro</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h2>Login</h2>
+        <form action="auth.php" method="POST">
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="password" name="senha" placeholder="Senha" required />
+          <button type="submit" name="login">Login</button>
+        </form>
+        <h2>Cadastro</h2>
+        <form action="auth.php" method="POST">
+          <input type="text" name="nomeCompleto" placeholder="Nome Completo" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="password" name="senha" placeholder="Senha" required />
+          <input type="password" name="confirmarSenha" placeholder="Confirmar Senha" required />
+          <button type="submit" name="cadastro">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
